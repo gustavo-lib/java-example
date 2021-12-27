@@ -29,3 +29,30 @@
         //returns the char value at the 23th index
         char result = s1.charAt(-1);
         System.out.println("Character at 23th position is: " + result);
+
+
+  System.out.println("is not blak "+StringUtils.isNotBlank(cadena));
+    	System.out.println("is black sin espacio "+StringUtils.isBlank(cadena));
+    	System.out.println("is black con espacio"+StringUtils.isBlank(cadena3));
+    	System.out.println("is not empity "+StringUtils.isEmpty(cadena2));
+    	System.out.println("eliminsdo espacios "+cad);
+    	System.out.println("is numeric "+StringUtils.isNumeric(numero2));
+    	boolean e="aB".matches("[a-zA-Z]*");
+    	if (nuevo.charAt(0)=='c' || nuevo.charAt(0)=='C' ) {
+    		System.out.println("tiene un ");
+    		
+            StringBuffer sbf = new StringBuffer("raghav");
+            System.out.println("String buffer before deletion = " + sbf);
+      
+            // Deleting the character at indexpoint 5
+            sbf.deleteCharAt(5);
+            System.out.println("After deletion new StringBuffer = " + sbf);
+    		
+    		
+    		StringBuilder a = new StringBuilder();
+    		a.append(nuevo);
+    		a.deleteCharAt(0);
+    		System.out.println("la nueva cadena es "+a);
+    	}
+    	System.out.println("con match "+ nuevo.charAt(0));
+		return cadena;
