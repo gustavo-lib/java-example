@@ -56,3 +56,58 @@
     	}
     	System.out.println("con match "+ nuevo.charAt(0));
 		return cadena;
+
+//*/*
+@GetMapping("/joder")
+	String salida() {
+		//
+		String numero=" ";
+		String numero2="  ";
+		String numero3=" h ";
+		String numero4=" 9 h  ";
+		String n2=StringUtils.deleteWhitespace(numero);
+		System.out.println("tamaño "+n2.length());
+		System.out.println("tamaño "+numero.length());
+		
+		if (!( StringUtils.isNumeric(n2) &&  (StringUtils.isNotEmpty(n2)) )) {
+			System.out.println("no es numero " +n2);
+			//String n2=StringUtils.deleteWhitespace(n2);
+		}
+		else {
+			System.out.println("es numero");
+		}
+		
+	
+		
+		return "a";
+	}
+	
+	@GetMapping("/hola")
+	String casa() {
+		String cadena="56156 15 ";
+		System.out.println("cadena con espacios "+cadena.length());
+		cadena=StringUtils.deleteWhitespace(cadena);
+		System.out.println("cadena sin espacios "+cadena.length());
+		
+		if(cadena.charAt(0)=='C'  || (cadena.charAt(0)=='c')) {
+			String nuevo=cadena.substring(1);
+			if (nuevo.matches("[0-9]*")) {
+				System.out.println("es un numero");
+				
+			}
+			else {
+				System.out.println("no es un numero");
+			}
+		}
+		else {
+			if (cadena.matches("[0-9]*{1..3}")) {
+				System.out.println("es un numero "+ cadena);
+				String sabe='C'+cadena;
+				System.out.println("se guardara como "+sabe);
+			}
+			else {
+				System.out.println("no es un numero "+ cadena);
+			}
+		}
+		return "";
+	}
